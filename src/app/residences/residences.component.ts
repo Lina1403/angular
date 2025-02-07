@@ -11,9 +11,9 @@ export class ResidencesComponent {
 
   listResidences: Residence[] = [
     { id: 1, name: "El fel", address: "Borj Cedria", image: "../../assets/img/residence.jpg ", status: "Disponible" },
-    { id: 2, name: "El yasmine", address: "Ezzahra", image: "../../assets/images/R1.jpg", status: "Disponible" },
-    { id: 3, name: "El Arij", address: "Rades", image: "../../assets/images/r3.jpg", status: "Vendu" },
-    { id: 4, name: "El Anber", address: "inconnu", image: "../../assets/images/r2.jpg", status: "En Construction" }
+    { id: 2, name: "El yasmine", address: "Ezzahra", image: "../../assets/img/R1.jpg", status: "Disponible" },
+    { id: 3, name: "El Arij", address: "Rades", image: "../../assets/img/r3.jpg", status: "Vendu" },
+    { id: 4, name: "El Anber", address: "inconnu", image: "../../assets/img/r2.jpg", status: "En Construction" }
   ];
 
   showLocation(residence: Residence) {
