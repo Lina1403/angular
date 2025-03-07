@@ -1,0 +1,172 @@
+<div class="container p-4 border rounded bg-light">
+
+  <!-- Titre du formulaire -->
+
+  <h2 class="text-center mb-4">Add New Apartment</h2>
+
+  <form [formGroup]="AddApart" class="container p-4 border rounded bg-light">
+
+   <div class="row mb-3">
+
+    <label for="apartNum" class="col-sm-3 col-form-label">Apartment Number:</label>
+
+    <div class="col-sm-9">
+
+     <input type="text" id="apartNum" class="form-control" formControlName="apartNum" />
+
+     <span style="color: red" *ngIf="AddApart.get('apartNum')?.invalid && AddApart.get('apartNum')?.touched "> Apartment Number is required!!!!! </span>
+
+     </div>
+
+    </div>
+
+
+
+
+
+   <div class="row mb-3">
+
+    <label for="floorNum" class="col-sm-3 col-form-label">Floor Number:</label>
+
+    <div class="col-sm-9">
+
+     <input type="text" id="floorNum" class="form-control" formControlName="floorNum" />
+
+
+
+    </div>
+
+   </div>
+
+
+
+   <div class="row mb-3">
+
+    <label for="surface" class="col-sm-3 col-form-label">Surface:</label>
+
+    <div class="col-sm-9">
+
+     <input type="text" id="surface" class="form-control" formControlName="surface" />
+
+
+
+    </div>
+
+   </div>
+
+
+
+   <div class="row mb-3">
+
+    <label class="col-sm-3 col-form-label" >Terrace:</label>
+
+    <div class="col-sm-9">
+
+     <div class="form-check">
+
+      <input type="radio" id="terraceYes" value="yes" formControlName="terrace" class="form-check-input" />
+
+      <label for="terraceYes" class="form-check-label">Yes</label>
+
+     </div>
+
+     <div class="form-check">
+
+      <input type="radio" id="terraceNo" value="no" formControlName="terrace" class="form-check-input" />
+
+      <label for="terraceNo" class="form-check-label">No</label>
+
+     </div>
+
+    </div>
+
+   </div>
+
+
+
+   <div class="row mb-3">
+
+
+
+     <input type="text" id="surfaceTerrace" class="form-control" formControlName="surfaceTerrace"
+
+     />
+
+
+
+    </div>
+
+
+
+
+
+
+
+   <div class="row mb-3">
+
+    <label class="col-sm-3 col-form-label">Category:</label>
+
+    <div class="col-sm-9">
+
+     <div class="form-check">
+
+      <input type="radio" id="categoryS1" value="S+1" formControlName="category" class="form-check-input" />
+
+      <label for="categoryS1" class="form-check-label">S+1</label>
+
+     </div>
+
+     <div class="form-check">
+
+      <input type="radio" id="categoryS2" value="S+2" formControlName="category" class="form-check-input" />
+
+      <label for="categoryS2" class="form-check-label">S+2</label>
+
+     </div>
+
+     <div class="form-check">
+
+      <input type="radio" id="categoryS3" value="S+3" formControlName="category" class="form-check-input" />
+
+      <label for="categoryS3" class="form-check-label">S+3</label>
+
+     </div>
+
+    </div>
+
+   </div>
+
+   <div class="mb-3">
+
+    <label for="residence" class="form-label">Residence:</label>
+
+    <select id="residence" class="form-select" formControlName="residence">
+
+
+
+    </select>
+
+
+
+   </div>
+
+
+
+
+
+   <div class="row">
+
+    <div class="col text-center">
+
+     <button type="submit" class="btn btn-primary me-2" [disabled]="AddApart.invalid">Add</button>
+
+     <button type="button" class="btn btn-secondary">Reset</button>
+
+    </div>
+
+   </div>
+
+  </form>
+
+ </div>
+

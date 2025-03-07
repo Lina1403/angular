@@ -1,0 +1,21 @@
+<h2 style="text-align: center; padding: 2%;">Liste des Résidences</h2>
+
+<br><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" style="margin-bottom: 20px" *ngFor="let r of listResidences">
+      <div class="card" style="width: 18rem">
+        <img class="card-img-top" [src]="r.image" alt="Image de la résidence" />
+        <div class="card-body">
+          <h5 class="card-title">{{ r.name }}</h5>
+          <span>{{ r.address }}</span>
+          <br>
+          <span>Status: {{ r.status }}</span>
+          <br><br>
+          <a class="btn btn-primary" [routerLink]="['/residences', r.id]">Voir Détails</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
